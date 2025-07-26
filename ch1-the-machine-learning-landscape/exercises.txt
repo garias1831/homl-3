@@ -1,0 +1,38 @@
+1. The art / science of solving complex tasks by finding patterns in data as opposed to relying on hard-coded rules. ML systems should improve given more data w.r.t some performance metric.   
+
+2. Complex problems that would require lots of rules (e.g speech recognition), problems that have no known algorithmic solution, gaining new insights into an existing problem, dynamic systems. 
+
+3. Training set: datset you feed to the model to enable it to find patterns in data. Labeled training set means that you provide the input data as well as the expected output (e.g pet data and pet_type=CAT for an image classifer).
+
+4. Classification + value prediction (regression)
+
+5. Dimensionality reduction, clustering, data visualization, anomaly detection
+
+6. RL algorithm
+
+7. Clustering algorithm
+
+8. Supervised - algorithm needs to know whether or not an email is 'spam' or not (e.g, through customer input). If we don't provide this data upfront, the algorithm may flag algorithms that it thinks are spam but with no real-world feedback.
+
+9. Online learning: system where we train the model incrementally with multiple smaller batches of data as opposed to one big batch. Online learning systems can take in new data on command whereas batch learning systems must train from the start each time an update is desired.
+
+10. Using an online-learning system to batch-train a model by splitting up the larger dataset into smaller pieces and feeding them to the model to avoid memory concerns. 
+
+11. Instance-based learning: compare new data points to a set of familar points to make predictions using some similarity measure (e.g euclidean distance)
+
+12. Model parameters can't be manually tuned; they arise as a result of the training process. Hyperparameters are a feature of the overall learning process, but unaffected by training (although the opposite isn't true, you could set a hyperparameter to restrict a model param, for example).
+
+13. Search for the optimal value for the model parameters that lets us generalize well. Most common strategy is to minimize a cost function. We make predictions by feeding new data into the model and using the learned parameters to get a result.  
+
+14. Poor input data, data drift (model trained on outdated data), overfitting, underfitting. 
+
+15. Overfitting. Solutions: get more representative training data, remove irrelevant features / add relevant features, preprocess data e.g by removing null values (reduce noise), applying regularization (simplify the model). 
+
+16. Test set: a sample of records from your datset that you use to evaluate the model performance. Used as a measure of how well your model will generalize to new, unseen instances in the real world.
+
+17. The test set should be used as an unbiased esimation of real-world data; using the test set to select a model can optimmistically bias your selection process because a model may peform well on the test set by chance. A validation set allows you to do some experimentation in model selection before the final 'sacred' evaluation.
+
+18. Train-dev set useful in dataset mismatch cases, where your training data doesn't exactly match your production data. The train-dev set contains non-production instances which you can use to iterate on models + hyperparameters without having to worry about whether poor results can be attributed to the mismatch. Poor performance on the dev set (containing prod instances) would suggest the issue is caused by the mismatch.
+
+19. Mostly same as 17, don't want to get lucky with the hyperparemeters because your test set should be representative of the real-world data, and iterating on it would make it more likely to get lucky by chance. 
+
